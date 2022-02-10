@@ -30,8 +30,8 @@ resource "aws_security_group" "ssh" {
 resource "aws_instance" "example" {
   count = 1
   ami           = "ami-0cf5e0804bc49842e" # amzn2-ami-hvm-2.0.20200207.1-x86_64-gp2
-  # instance_type = "m5.xlarge"
-  instance_type = "t2.large"
+  instance_type = "m5.xlarge"
+  # instance_type = "t2.large"
   vpc_security_group_ids = [
     aws_security_group.ssh.id
   ]
